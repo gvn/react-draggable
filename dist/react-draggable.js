@@ -430,8 +430,8 @@ return /******/ (function(modules) { // webpackBootstrap
 				dragging: true,
 				offsetX: parseInt(dragPoint.clientX, 10),
 				offsetY: parseInt(dragPoint.clientY, 10),
-				startX: parseInt(node.style.transform.match(/-?\d+/g)[0], 10) || 0,
-				startY: parseInt(node.style.transform.match(/-?\d+/g)[1], 10) || 0
+				startX: parseInt(node.style['-webkit-transform'].match(/-?\d+/g)[0], 10) || 0,
+				startY: parseInt(node.style['-webkit-transform'].match(/-?\d+/g)[1], 10) || 0
 			});
 	
 			// Call event handler
@@ -494,7 +494,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	
 		render: function () {
 			var style = {
-				transform: 'translate(' +
+				'-webkit-transform': 'translate(' +
 					(canDragX(this) ? this.state.clientX : this.state.startX) + 'px, ' +
 					(canDragY(this) ? this.state.clientY : this.state.startY) + 'px)'
 			};
