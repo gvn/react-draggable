@@ -63,7 +63,6 @@ return /******/ (function(modules) { // webpackBootstrap
 
 	'use strict';
 	
-	/** @jsx React.DOM */
 	var React = __webpack_require__(2);
 	var emptyFunction = __webpack_require__(3);
 	var CX = React.addons.classSet;
